@@ -71,11 +71,13 @@ then watch **Publish site**.
          "event_type": "jira-doc-update",
          "client_payload": {
            "key": "{{issue.key}}",
-           "summary": {{issue.summary.jsonEncode}},
-           "change": {{issue.User-facing change.jsonEncode}},
+           "summary": "{{issue.summary.jsonEncode}}",
+           "change": "{{issue.User-facing change.jsonEncode}}",
            "feature": "{{issue.components.name}}",
            "version": "{{issue.fixVersions.name}}",
-           "url": "{{issue.url}}"
+           "url": "{{issue.url}}",
+           "stepIndex": "{{issue.Step number}}",
+           "stepText": "{{issue.New step text.jsonEncode}}"
          }
        }
        ```
