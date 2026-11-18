@@ -20,6 +20,8 @@ Jira ticket → Done ──(Automation: Send web request)──▶ GitHub reposi
 | `index.html` | Home: role picker, country, search, topics, What's new |
 | `guide.html?id=…` | Feature guide page: Android/iPhone toggle, steps, "What changed recently" |
 | `content/guides.json` | All guide content. Each guide has a `featureId`, which Jira tickets point to |
+| `features.html` | App features: all 20 features, each linked to its guide |
+| `content/features.json` | Feature list (from the feature map) |
 | `content/whats-new.json` | What's new feed (Jira updates are added at the top) |
 | `scripts/apply-jira-update.mjs` | Applies one ticket to the content (optionally drafts the wording with Claude) |
 | `.github/workflows/jira-doc-update.yml` | Runs on a Jira event or manually, then opens a pull request |
@@ -80,6 +82,38 @@ then watch **Publish site**.
    Use the exact name of your custom field in `{{issue.User-facing change…}}`.
 3. In Jira, give Components the same names as the `featureId` values in
    `content/guides.json` (for example `YC-EARN-RECEIPT`).
+
+### Jira Component names (one per guide)
+Create these as Components in your Jira project. A ticket's Component tells the
+pipeline which guide page to update.
+
+| Component | Guide page |
+|---|---|
+| `YC-ONBOARD-INSTALL` | Install the app |
+| `YC-ONBOARD-REGISTER` | Register your shop |
+| `YC-ONBOARD-VERIFY` | Verify your account |
+| `YC-ACCOUNT-LOCATION` | Set your shop location and photo |
+| `YC-SHOP-MULTISHOP` | Add branches and shop assistants |
+| `YC-SHOP-STOCK` | Update your stock |
+| `YC-SHOP-PROFILE` | Set up your online shop |
+| `YC-FARMER-ORDERS` | Handle farmer orders |
+| `YC-FARMER-USSD` | Orders from basic phones (USSD) |
+| `YC-FARMER-ASSISTED` | Order for a farmer (assisted order) |
+| `YC-FARMER-REFERRAL` | Invite farmers (Farmers club) |
+| `YC-FARMER-PAYMENTS` | Get paid with M-Pesa |
+| `YC-DOS-ORDER` | Order from Yara (DOS) |
+| `YC-DOS-TRACK` | Track a Yara order |
+| `YC-ROS-ORDER` | Order from your distributor (retailer) |
+| `YC-ROS-APPROVE` | Approve retailer orders (distributor) |
+| `YC-EARN-RECEIPT` | Earn points with a receipt |
+| `YC-EARN-QR` | Scan QR codes |
+| `YC-EARN-HISTORY` | Check your transaction history |
+| `YC-REWARDS-REDEEM` | Redeem a reward |
+| `YC-REWARDS-TIERS` | Tiers and quarterly rebates |
+| `YC-SALES-DASHBOARD` | Read your sales dashboard |
+| `YC-NEWSFEED` | Read news and tips |
+| `YC-SUPPORT` | Get help and contact support |
+| `AP-RECEIPTS` | Approve receipts (Admin Portal) |
 
 ### Optional fields a ticket can send
 `stepIndex` (step number that changed) and `stepText` (new wording for that step).

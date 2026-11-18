@@ -1,41 +1,1100 @@
 {
   "categories": [
-    { "id": "get-started", "title": "Get started", "desc": "Download, register, verify your account", "roles": ["dealer", "subdealer", "assistant"] },
-    { "id": "my-shop", "title": "My shop", "desc": "Shop details, stock, branches and staff", "roles": ["dealer", "subdealer"] },
-    { "id": "dos", "title": "Order from Yara (DOS)", "desc": "Floor load, sling, tonnes or bags, tracking", "roles": ["dealer"] },
-    { "id": "ros", "title": "Sell to retailers (ROS)", "desc": "Review, approve and complete shop orders", "roles": ["dealer"] },
-    { "id": "farmers", "title": "Sell to farmers", "desc": "Farmer orders, assisted orders, referrals", "roles": ["dealer", "subdealer", "assistant"] },
-    { "id": "earn-points", "title": "Earn points", "desc": "Receipts, QR scan, transaction history", "roles": ["dealer", "subdealer", "assistant"] },
-    { "id": "rewards", "title": "Rewards", "desc": "Redeem, track requests, points expiry", "roles": ["dealer", "subdealer"] },
-    { "id": "admin", "title": "Approvals and campaigns", "desc": "Admin Portal: approvals, orders, stock", "roles": ["staff"] }
+    {
+      "id": "get-started",
+      "title": "Get started",
+      "desc": "Download, register, verify your account",
+      "roles": [
+        "dealer",
+        "subdealer",
+        "assistant"
+      ]
+    },
+    {
+      "id": "my-shop",
+      "title": "My shop",
+      "desc": "Location, branches, staff, stock, online shop",
+      "roles": [
+        "dealer",
+        "subdealer",
+        "assistant"
+      ]
+    },
+    {
+      "id": "dos",
+      "title": "Order from Yara (DOS)",
+      "desc": "Floor load, sling, tonnes or bags, tracking",
+      "roles": [
+        "dealer"
+      ]
+    },
+    {
+      "id": "ros",
+      "title": "Distributor orders (ROS)",
+      "desc": "Order from or approve orders for your distributor",
+      "roles": [
+        "dealer",
+        "subdealer"
+      ]
+    },
+    {
+      "id": "farmers",
+      "title": "Sell to farmers",
+      "desc": "Farmer orders, assisted orders, referrals",
+      "roles": [
+        "dealer",
+        "subdealer",
+        "assistant"
+      ]
+    },
+    {
+      "id": "earn-points",
+      "title": "Earn points",
+      "desc": "Receipts, QR scan, transaction history",
+      "roles": [
+        "dealer",
+        "subdealer",
+        "assistant"
+      ]
+    },
+    {
+      "id": "rewards",
+      "title": "Rewards",
+      "desc": "Redeem, tiers, rebates",
+      "roles": [
+        "dealer",
+        "subdealer"
+      ]
+    },
+    {
+      "id": "help",
+      "title": "Sales and help",
+      "desc": "Sales dashboard, newsfeed, support",
+      "roles": [
+        "dealer",
+        "subdealer",
+        "assistant"
+      ]
+    },
+    {
+      "id": "admin",
+      "title": "Admin Portal",
+      "desc": "Approvals, orders, stock, campaigns",
+      "roles": [
+        "staff"
+      ]
+    }
   ],
   "guides": [
+    {
+      "id": "install-app",
+      "featureId": "YC-ONBOARD-INSTALL",
+      "featureNo": 1,
+      "category": "get-started",
+      "title": "Install the app",
+      "summary": "Download YaraConnect from the Google Play Store or Apple App Store.",
+      "roles": [
+        "dealer",
+        "subdealer",
+        "assistant"
+      ],
+      "countries": [
+        "Thailand",
+        "Vietnam",
+        "Indonesia",
+        "India",
+        "Kenya"
+      ],
+      "minutes": 3,
+      "appVersion": "1.7",
+      "updated": "2026-11-10",
+      "status": "published",
+      "source": "TH sub-dealer guide V1.0 (app 1.7)",
+      "before": [
+        "Phone has internet",
+        "About 100 MB free space"
+      ],
+      "steps": [
+        {
+          "title": "Open your app store",
+          "android": "Open the Play Store on your phone.",
+          "ios": "Open the App Store on your iPhone.",
+          "screen": "Phone home screen",
+          "y": "60%"
+        },
+        {
+          "title": "Search for Yara Connect",
+          "android": "Search \"Yara Connect\" and tap the first result.",
+          "ios": "Search \"Yara Connect\" and tap the first result.",
+          "screen": "Store search",
+          "y": "18%"
+        },
+        {
+          "title": "Install",
+          "android": "Tap Install, sign in with your Google account if asked, and wait for it to finish.",
+          "ios": "Tap Get, confirm with Face ID or your password, and wait for it to finish.",
+          "screen": "App listing",
+          "y": "35%"
+        },
+        {
+          "title": "Pick country and language",
+          "android": "Open the app, select the country where your shop is, then your language.",
+          "ios": "Open the app, select the country where your shop is, then your language.",
+          "screen": "Country select",
+          "y": "55%"
+        }
+      ],
+      "tip": "You can also download it from the YaraConnect website: rewards.yaradigital.com",
+      "next": [],
+      "problems": [
+        "The app won't install"
+      ],
+      "changes": []
+    },
+    {
+      "id": "register",
+      "featureId": "YC-ONBOARD-REGISTER",
+      "featureNo": 1,
+      "category": "get-started",
+      "title": "Register your shop",
+      "summary": "Create your account with your personal details, shop details and your dealer's code.",
+      "roles": [
+        "dealer",
+        "subdealer"
+      ],
+      "countries": [
+        "Thailand",
+        "Vietnam",
+        "Indonesia",
+        "India",
+        "Kenya"
+      ],
+      "minutes": 4,
+      "appVersion": "1.7",
+      "updated": "2026-11-10",
+      "status": "published",
+      "source": "TH sub-dealer guide V1.0 (app 1.7)",
+      "before": [
+        "Your dealer's referral code",
+        "Your shop address"
+      ],
+      "steps": [
+        {
+          "title": "Agree to the terms",
+          "android": "Read the terms and conditions, tap Agree, then tap I accept.",
+          "ios": "Read the terms and conditions, tap Agree, then tap I accept.",
+          "screen": "Terms & conditions",
+          "y": "88%"
+        },
+        {
+          "title": "Enter your details",
+          "android": "Fill in your name and contact details, then tap Next.",
+          "ios": "Fill in your name and contact details, then tap Next.",
+          "screen": "User particulars",
+          "y": "85%"
+        },
+        {
+          "title": "Enter shop details",
+          "android": "Enter your shop name, address, province and district, then tap Next.",
+          "ios": "Enter your shop name, address, province and district, then tap Next.",
+          "screen": "Shop particulars",
+          "y": "85%"
+        },
+        {
+          "title": "Enter your dealer code",
+          "android": "Type the referral code your dealer gave you and tap Submit.",
+          "ios": "Type the referral code your dealer gave you and tap Submit.",
+          "screen": "Dealer code",
+          "y": "60%"
+        }
+      ],
+      "tip": "Ask your dealer for the code before you start. Without it, your account can't be linked to them.",
+      "next": [
+        {
+          "label": "NEXT",
+          "text": "Verify your phone number",
+          "tone": "good"
+        }
+      ],
+      "problems": [
+        "I don't have a dealer code"
+      ],
+      "changes": []
+    },
+    {
+      "id": "verify-account",
+      "featureId": "YC-ONBOARD-VERIFY",
+      "featureNo": 1,
+      "category": "get-started",
+      "title": "Verify your account",
+      "summary": "Confirm your phone number so Yara can approve your shop.",
+      "roles": [
+        "dealer",
+        "subdealer",
+        "assistant"
+      ],
+      "countries": [
+        "Thailand",
+        "Vietnam",
+        "Indonesia",
+        "India",
+        "Kenya"
+      ],
+      "minutes": 2,
+      "appVersion": "1.7",
+      "updated": "2026-11-10",
+      "status": "published",
+      "source": "TH sub-dealer guide V1.0 (app 1.7)",
+      "before": [],
+      "steps": [
+        {
+          "title": "Check your country",
+          "android": "Make sure the country shown is correct (for example Thailand).",
+          "ios": "Make sure the country shown is correct (for example Thailand).",
+          "screen": "Verify screen",
+          "y": "25%"
+        },
+        {
+          "title": "Enter your phone number",
+          "android": "Type the phone number you registered with.",
+          "ios": "Type the phone number you registered with.",
+          "screen": "Phone number",
+          "y": "45%"
+        },
+        {
+          "title": "Enter the code",
+          "android": "Type the one-time code sent by SMS, then tap to continue.",
+          "ios": "Type the one-time code sent by SMS, then tap to continue.",
+          "screen": "OTP",
+          "y": "55%"
+        },
+        {
+          "title": "Wait for approval",
+          "android": "You land on the Home screen. Approval usually takes up to 10 minutes.",
+          "ios": "You land on the Home screen. Approval usually takes up to 10 minutes.",
+          "screen": "Home screen",
+          "y": "20%"
+        }
+      ],
+      "tip": "",
+      "next": [
+        {
+          "label": "APPROVED",
+          "text": "You can start earning points",
+          "tone": "good"
+        },
+        {
+          "label": "OR · REJECTED",
+          "text": "Check the reason and contact support",
+          "tone": "bad"
+        }
+      ],
+      "problems": [
+        "I didn't get the SMS code",
+        "My account was rejected"
+      ],
+      "changes": []
+    },
+    {
+      "id": "shop-location",
+      "featureId": "YC-ACCOUNT-LOCATION",
+      "featureNo": 2,
+      "category": "my-shop",
+      "title": "Set your shop location and photo",
+      "summary": "Add your shop's GPS location and a photo so Yara and farmers can find you.",
+      "roles": [
+        "dealer",
+        "subdealer"
+      ],
+      "countries": [
+        "Thailand",
+        "Vietnam",
+        "Indonesia",
+        "India",
+        "Kenya"
+      ],
+      "minutes": 2,
+      "appVersion": "1.7",
+      "updated": "2026-11-10",
+      "status": "published",
+      "source": "TH sub-dealer guide V1.0 (app 1.7)",
+      "before": [
+        "You are standing in your shop"
+      ],
+      "steps": [
+        {
+          "title": "Open Account",
+          "android": "On the home screen, tap Account.",
+          "ios": "On the home screen, tap Account.",
+          "screen": "Home screen",
+          "y": "90%"
+        },
+        {
+          "title": "Tap GPS location",
+          "android": "In Account settings, tap GPS location.",
+          "ios": "In Account settings, tap GPS location.",
+          "screen": "Account settings",
+          "y": "40%"
+        },
+        {
+          "title": "Confirm you are at the shop",
+          "android": "Tap \"Yes, I am at my shop\" and allow location access.",
+          "ios": "Tap \"Yes, I am at my shop\" and allow location access.",
+          "screen": "Location prompt",
+          "y": "70%"
+        },
+        {
+          "title": "Add a shop photo",
+          "android": "Back on Home, tap Upload photo, take the photo, rotate if needed and confirm.",
+          "ios": "Back on Home, tap Upload photo, take the photo, rotate if needed and confirm.",
+          "screen": "Upload photo",
+          "y": "60%"
+        }
+      ],
+      "tip": "Only set the location while you are physically at the shop. You can tap Update later if you move.",
+      "next": [],
+      "problems": [],
+      "changes": []
+    },
+    {
+      "id": "multishop-staff",
+      "featureId": "YC-SHOP-MULTISHOP",
+      "featureNo": 3,
+      "category": "my-shop",
+      "title": "Add branches and shop assistants",
+      "summary": "Add branch shops under your account and invite staff to help scan and take orders.",
+      "roles": [
+        "dealer",
+        "subdealer"
+      ],
+      "countries": [
+        "Thailand",
+        "Vietnam",
+        "Indonesia",
+        "India",
+        "Kenya"
+      ],
+      "minutes": 2,
+      "appVersion": "2.x",
+      "updated": "2026-11-18",
+      "status": "draft",
+      "before": [],
+      "steps": [
+        {
+          "title": "Open My shops",
+          "android": "Go to Account, then My shops.",
+          "ios": "Go to Account, then My shops.",
+          "screen": "Account",
+          "y": "50%"
+        },
+        {
+          "title": "Add a branch",
+          "android": "Tap Add shop, enter the branch details and upload its documents and tax ID.",
+          "ios": "Tap Add shop, enter the branch details and upload its documents and tax ID.",
+          "screen": "Add shop",
+          "y": "80%"
+        },
+        {
+          "title": "Invite an assistant",
+          "android": "Tap Staff, then Invite, and enter the assistant's phone number.",
+          "ios": "Tap Staff, then Invite, and enter the assistant's phone number.",
+          "screen": "Staff list",
+          "y": "85%"
+        },
+        {
+          "title": "Wait for approval",
+          "android": "Yara approves new branches in the Admin Portal.",
+          "ios": "Yara approves new branches in the Admin Portal.",
+          "screen": "Pending approval",
+          "y": "40%"
+        }
+      ],
+      "tip": "Shop assistants can't manage shops or redeem rewards. In Thailand, dealer branches don't earn points.",
+      "next": [],
+      "problems": [
+        "My branch is still pending"
+      ],
+      "changes": []
+    },
+    {
+      "id": "update-stock",
+      "featureId": "YC-SHOP-STOCK",
+      "featureNo": 4,
+      "category": "my-shop",
+      "title": "Update your stock",
+      "summary": "Keep product, size, price and quantity up to date so farmers see what you have.",
+      "roles": [
+        "dealer",
+        "subdealer",
+        "assistant"
+      ],
+      "countries": [
+        "Thailand",
+        "Vietnam",
+        "Indonesia",
+        "India",
+        "Kenya"
+      ],
+      "minutes": 2,
+      "appVersion": "2.x",
+      "updated": "2026-11-18",
+      "status": "draft",
+      "before": [],
+      "steps": [
+        {
+          "title": "Open Stock",
+          "android": "From the home screen, tap Stock.",
+          "ios": "From the home screen, tap Stock.",
+          "screen": "Home screen",
+          "y": "70%"
+        },
+        {
+          "title": "Pick a product",
+          "android": "Choose the product and pack size you want to update.",
+          "ios": "Choose the product and pack size you want to update.",
+          "screen": "Stock list",
+          "y": "35%"
+        },
+        {
+          "title": "Change quantity or price",
+          "android": "Edit the retail price or quantity, then tap Save.",
+          "ios": "Edit the retail price or quantity, then tap Save.",
+          "screen": "Edit product",
+          "y": "75%"
+        }
+      ],
+      "tip": "Dealer stock is synced from Yara's system. Dealers can only reduce stock by hand, to record offline sales.",
+      "next": [
+        {
+          "label": "AVAILABLE",
+          "text": "Total minus stock held by pending farmer orders",
+          "tone": "good"
+        },
+        {
+          "label": "PENDING",
+          "text": "Reserved for farmer orders not yet completed",
+          "tone": "muted"
+        }
+      ],
+      "problems": [],
+      "changes": []
+    },
+    {
+      "id": "online-shop",
+      "featureId": "YC-SHOP-PROFILE",
+      "featureNo": 5,
+      "category": "my-shop",
+      "title": "Set up your online shop",
+      "summary": "Add photos, opening hours and a description that farmers see in Yara FarmCare.",
+      "roles": [
+        "dealer",
+        "subdealer"
+      ],
+      "countries": [
+        "Thailand",
+        "Vietnam",
+        "Indonesia",
+        "India",
+        "Kenya"
+      ],
+      "minutes": 2,
+      "appVersion": "2.x",
+      "updated": "2026-11-18",
+      "status": "draft",
+      "before": [],
+      "steps": [
+        {
+          "title": "Open Shop profile",
+          "android": "Go to Account, then Shop profile.",
+          "ios": "Go to Account, then Shop profile.",
+          "screen": "Account",
+          "y": "45%"
+        },
+        {
+          "title": "Add details",
+          "android": "Add a photo, phone number, opening hours and a short description.",
+          "ios": "Add a photo, phone number, opening hours and a short description.",
+          "screen": "Shop profile",
+          "y": "60%"
+        },
+        {
+          "title": "Publish",
+          "android": "Tap Save. Farmers can now find your shop in the FarmCare app.",
+          "ios": "Tap Save. Farmers can now find your shop in the FarmCare app.",
+          "screen": "Saved",
+          "y": "80%"
+        }
+      ],
+      "tip": "",
+      "next": [],
+      "problems": [],
+      "changes": []
+    },
+    {
+      "id": "farmer-orders",
+      "featureId": "YC-FARMER-ORDERS",
+      "featureNo": 6,
+      "category": "farmers",
+      "title": "Handle farmer orders",
+      "summary": "Accept, prepare and complete orders farmers place in Yara FarmCare.",
+      "roles": [
+        "dealer",
+        "subdealer",
+        "assistant"
+      ],
+      "countries": [
+        "Thailand",
+        "Vietnam",
+        "Indonesia",
+        "India",
+        "Kenya"
+      ],
+      "minutes": 2,
+      "appVersion": "2.x",
+      "updated": "2026-11-18",
+      "status": "draft",
+      "before": [],
+      "steps": [
+        {
+          "title": "Open the new order",
+          "android": "Tap the notification, or go to Orders → To review.",
+          "ios": "Tap the notification, or go to Orders → To review.",
+          "screen": "Orders",
+          "y": "30%"
+        },
+        {
+          "title": "Accept or decline",
+          "android": "Check the products and tap Accept. If you decline, choose a reason.",
+          "ios": "Check the products and tap Accept. If you decline, choose a reason.",
+          "screen": "Order details",
+          "y": "85%"
+        },
+        {
+          "title": "Hand over the products",
+          "android": "When the farmer collects, scan their QR code or enter their code.",
+          "ios": "When the farmer collects, scan their QR code or enter their code.",
+          "screen": "Verify pickup",
+          "y": "50%"
+        },
+        {
+          "title": "Complete the order",
+          "android": "Tap Complete. It moves to Past orders.",
+          "ios": "Tap Complete. It moves to Past orders.",
+          "screen": "Order complete",
+          "y": "80%"
+        }
+      ],
+      "tip": "",
+      "next": [
+        {
+          "label": "TO REVIEW",
+          "text": "New order waiting for you",
+          "tone": "muted"
+        },
+        {
+          "label": "ACCEPTED",
+          "text": "Farmer is told to come and collect",
+          "tone": "good"
+        },
+        {
+          "label": "OR · DECLINED",
+          "text": "Farmer sees your reason",
+          "tone": "bad"
+        }
+      ],
+      "problems": [],
+      "changes": []
+    },
+    {
+      "id": "ussd-orders",
+      "featureId": "YC-FARMER-USSD",
+      "featureNo": 7,
+      "category": "farmers",
+      "title": "Orders from basic phones (USSD)",
+      "summary": "Some farmers order by basic phone. Their orders show as \"USSD user\".",
+      "roles": [
+        "dealer",
+        "subdealer"
+      ],
+      "countries": [
+        "Kenya"
+      ],
+      "minutes": 2,
+      "appVersion": "2.x",
+      "updated": "2026-11-18",
+      "status": "draft",
+      "before": [],
+      "steps": [
+        {
+          "title": "Find the order",
+          "android": "USSD orders appear in Orders with the farmer's phone number only.",
+          "ios": "USSD orders appear in Orders with the farmer's phone number only.",
+          "screen": "Orders",
+          "y": "35%"
+        },
+        {
+          "title": "Accept and complete",
+          "android": "Accept, hand over and complete the order the same way as app orders.",
+          "ios": "Accept, hand over and complete the order the same way as app orders.",
+          "screen": "Order details",
+          "y": "80%"
+        }
+      ],
+      "tip": "Call the farmer on the number shown if you need to confirm anything.",
+      "next": [],
+      "problems": [],
+      "changes": []
+    },
+    {
+      "id": "assisted-order",
+      "featureId": "YC-FARMER-ASSISTED",
+      "featureNo": 8,
+      "category": "farmers",
+      "title": "Order for a farmer (assisted order)",
+      "summary": "Create an order on behalf of a farmer who is in your shop.",
+      "roles": [
+        "dealer",
+        "subdealer"
+      ],
+      "countries": [
+        "India"
+      ],
+      "minutes": 2,
+      "appVersion": "2.x",
+      "updated": "2026-11-18",
+      "status": "draft",
+      "before": [],
+      "steps": [
+        {
+          "title": "Start an assisted order",
+          "android": "Tap Assisted order and enter the farmer's phone number.",
+          "ios": "Tap Assisted order and enter the farmer's phone number.",
+          "screen": "Assisted order",
+          "y": "40%"
+        },
+        {
+          "title": "Confirm with the farmer's code",
+          "android": "Ask the farmer for the one-time code they receive by SMS.",
+          "ios": "Ask the farmer for the one-time code they receive by SMS.",
+          "screen": "OTP",
+          "y": "55%"
+        },
+        {
+          "title": "Add products",
+          "android": "Add products, apply any coupon or referral code, and check the final price.",
+          "ios": "Add products, apply any coupon or referral code, and check the final price.",
+          "screen": "Cart",
+          "y": "80%"
+        },
+        {
+          "title": "Complete",
+          "android": "Tap Complete. Use Back to shop within 30 minutes to place another order for the same farmer.",
+          "ios": "Tap Complete. Use Back to shop within 30 minutes to place another order for the same farmer.",
+          "screen": "Order complete",
+          "y": "80%"
+        }
+      ],
+      "tip": "",
+      "next": [],
+      "problems": [],
+      "changes": []
+    },
+    {
+      "id": "farmer-referral",
+      "featureId": "YC-FARMER-REFERRAL",
+      "featureNo": 17,
+      "category": "farmers",
+      "title": "Invite farmers (Farmers club)",
+      "summary": "Share your QR code or link so farmers join FarmCare and land on your shop.",
+      "roles": [
+        "dealer",
+        "subdealer"
+      ],
+      "countries": [
+        "Thailand",
+        "Vietnam",
+        "Indonesia",
+        "India",
+        "Kenya"
+      ],
+      "minutes": 2,
+      "appVersion": "2.x",
+      "updated": "2026-11-18",
+      "status": "draft",
+      "before": [],
+      "steps": [
+        {
+          "title": "Open Farmers club",
+          "android": "From the home screen, tap Farmers club.",
+          "ios": "From the home screen, tap Farmers club.",
+          "screen": "Home screen",
+          "y": "65%"
+        },
+        {
+          "title": "Share your QR or link",
+          "android": "Show your QR code, or share the link by chat app.",
+          "ios": "Show your QR code, or share the link by chat app.",
+          "screen": "Referral QR",
+          "y": "50%"
+        }
+      ],
+      "tip": "",
+      "next": [],
+      "problems": [],
+      "changes": []
+    },
+    {
+      "id": "mpesa-payments",
+      "featureId": "YC-FARMER-PAYMENTS",
+      "featureNo": 19,
+      "category": "farmers",
+      "title": "Get paid with M-Pesa",
+      "summary": "Add your M-Pesa paybill or till number to your online shop.",
+      "roles": [
+        "dealer",
+        "subdealer"
+      ],
+      "countries": [
+        "Kenya"
+      ],
+      "minutes": 2,
+      "appVersion": "2.x",
+      "updated": "2026-11-18",
+      "status": "draft",
+      "before": [],
+      "steps": [
+        {
+          "title": "Open Payments",
+          "android": "Go to Shop profile → Payments.",
+          "ios": "Go to Shop profile → Payments.",
+          "screen": "Shop profile",
+          "y": "70%"
+        },
+        {
+          "title": "Add your number",
+          "android": "Enter your paybill or till number and tap Save.",
+          "ios": "Enter your paybill or till number and tap Save.",
+          "screen": "Payments",
+          "y": "60%"
+        }
+      ],
+      "tip": "",
+      "next": [],
+      "problems": [],
+      "changes": []
+    },
+    {
+      "id": "dos-place-order",
+      "featureId": "YC-DOS-ORDER",
+      "featureNo": 15,
+      "category": "dos",
+      "title": "Order from Yara (DOS)",
+      "summary": "Order stock directly from Yara by floor load or sling, in tonnes or bags.",
+      "roles": [
+        "dealer"
+      ],
+      "countries": [
+        "Thailand"
+      ],
+      "minutes": 4,
+      "appVersion": "2.x",
+      "updated": "2026-11-18",
+      "status": "draft",
+      "before": [
+        "Your truck number",
+        "Your PO number"
+      ],
+      "steps": [
+        {
+          "title": "Open Order from Yara",
+          "android": "From the home screen, tap Order from Yara.",
+          "ios": "From the home screen, tap Order from Yara.",
+          "screen": "Home screen",
+          "y": "60%"
+        },
+        {
+          "title": "Choose products",
+          "android": "Pick products by family. Choose floor load, sling or both, and enter the quantity in MT or bags.",
+          "ios": "Pick products by family. Choose floor load, sling or both, and enter the quantity in MT or bags.",
+          "screen": "Catalogue",
+          "y": "50%"
+        },
+        {
+          "title": "Add delivery details",
+          "android": "Enter truck number, pick-up date (today to 7 days ahead), payment terms and PO number.",
+          "ios": "Enter truck number, pick-up date (today to 7 days ahead), payment terms and PO number.",
+          "screen": "Order details",
+          "y": "65%"
+        },
+        {
+          "title": "Submit",
+          "android": "Check the summary and tap Submit. The order is sent to Yara.",
+          "ios": "Check the summary and tap Submit. The order is sent to Yara.",
+          "screen": "Order summary",
+          "y": "85%"
+        }
+      ],
+      "tip": "A sling is a bundle of 2 MT (Urea/NPK) or 1.6 MT (organic).",
+      "next": [
+        {
+          "label": "PENDING",
+          "text": "Yara is processing the order",
+          "tone": "muted"
+        },
+        {
+          "label": "FULFILLED",
+          "text": "Ready for pick-up",
+          "tone": "good"
+        },
+        {
+          "label": "OR · FAILED",
+          "text": "Order didn't reach Yara's system",
+          "tone": "bad"
+        }
+      ],
+      "problems": [
+        "My order says Failed",
+        "My order was cancelled after 30 days"
+      ],
+      "changes": []
+    },
+    {
+      "id": "dos-track-order",
+      "featureId": "YC-DOS-TRACK",
+      "featureNo": 15,
+      "category": "dos",
+      "title": "Track a Yara order",
+      "summary": "See the status of your orders and chat with Yara about them.",
+      "roles": [
+        "dealer"
+      ],
+      "countries": [
+        "Thailand"
+      ],
+      "minutes": 2,
+      "appVersion": "2.x",
+      "updated": "2026-11-18",
+      "status": "draft",
+      "before": [],
+      "steps": [
+        {
+          "title": "Open My orders",
+          "android": "Go to Order from Yara → My orders.",
+          "ios": "Go to Order from Yara → My orders.",
+          "screen": "My orders",
+          "y": "25%"
+        },
+        {
+          "title": "Check the status",
+          "android": "Pending is grey, Completed is green, Declined or Failed is red.",
+          "ios": "Pending is grey, Completed is green, Declined or Failed is red.",
+          "screen": "Order list",
+          "y": "40%"
+        },
+        {
+          "title": "Chat with Yara",
+          "android": "Open an order and tap Chat to ask Yara staff about it.",
+          "ios": "Open an order and tap Chat to ask Yara staff about it.",
+          "screen": "Order chat",
+          "y": "88%"
+        }
+      ],
+      "tip": "",
+      "next": [],
+      "problems": [],
+      "changes": []
+    },
+    {
+      "id": "ros-place-order",
+      "featureId": "YC-ROS-ORDER",
+      "featureNo": 14,
+      "category": "ros",
+      "title": "Order from your distributor (retailer)",
+      "summary": "Order stock from your distributor in the app.",
+      "roles": [
+        "subdealer"
+      ],
+      "countries": [
+        "Thailand",
+        "Kenya",
+        "India"
+      ],
+      "minutes": 2,
+      "appVersion": "2.x",
+      "updated": "2026-11-18",
+      "status": "draft",
+      "before": [],
+      "steps": [
+        {
+          "title": "Open Order stock",
+          "android": "From the home screen, tap Order stock.",
+          "ios": "From the home screen, tap Order stock.",
+          "screen": "Home screen",
+          "y": "60%"
+        },
+        {
+          "title": "Add products",
+          "android": "Pick products and quantities.",
+          "ios": "Pick products and quantities.",
+          "screen": "Catalogue",
+          "y": "50%"
+        },
+        {
+          "title": "Send the order",
+          "android": "Tap Send. Your distributor reviews it.",
+          "ios": "Tap Send. Your distributor reviews it.",
+          "screen": "Summary",
+          "y": "85%"
+        }
+      ],
+      "tip": "",
+      "next": [
+        {
+          "label": "PENDING",
+          "text": "Waiting for your distributor",
+          "tone": "muted"
+        },
+        {
+          "label": "COMPLETED",
+          "text": "Distributor accepted (maybe with edits)",
+          "tone": "good"
+        },
+        {
+          "label": "OR · DECLINED",
+          "text": "See the reason",
+          "tone": "bad"
+        }
+      ],
+      "problems": [],
+      "changes": []
+    },
+    {
+      "id": "ros-approve",
+      "featureId": "YC-ROS-APPROVE",
+      "featureNo": 14,
+      "category": "ros",
+      "title": "Approve retailer orders (distributor)",
+      "summary": "Review, edit and approve orders your retailers send you.",
+      "roles": [
+        "dealer"
+      ],
+      "countries": [
+        "Thailand",
+        "Kenya",
+        "India"
+      ],
+      "minutes": 2,
+      "appVersion": "2.x",
+      "updated": "2026-11-18",
+      "status": "draft",
+      "before": [],
+      "steps": [
+        {
+          "title": "Open Retailer orders",
+          "android": "Tap the notification, or go to Orders → Retailer orders.",
+          "ios": "Tap the notification, or go to Orders → Retailer orders.",
+          "screen": "Orders",
+          "y": "30%"
+        },
+        {
+          "title": "Review and edit",
+          "android": "Check the products. You can change quantity or price before approving.",
+          "ios": "Check the products. You can change quantity or price before approving.",
+          "screen": "Order details",
+          "y": "60%"
+        },
+        {
+          "title": "Approve or decline",
+          "android": "Tap Approve. For Direct orders, the order then goes to Yara.",
+          "ios": "Tap Approve. For Direct orders, the order then goes to Yara.",
+          "screen": "Order details",
+          "y": "85%"
+        }
+      ],
+      "tip": "Orders with no activity are cancelled automatically after 30 days.",
+      "next": [],
+      "problems": [],
+      "changes": []
+    },
     {
       "id": "earn-points-receipt",
       "featureId": "YC-EARN-RECEIPT",
       "category": "earn-points",
       "title": "Earn points with a receipt",
       "summary": "Take a photo of your Yara purchase receipt. Yara checks it and adds points to your account.",
-      "roles": ["dealer", "subdealer"],
-      "countries": ["Thailand", "Vietnam", "Indonesia"],
+      "roles": [
+        "dealer",
+        "subdealer"
+      ],
+      "countries": [
+        "Thailand",
+        "Vietnam",
+        "Indonesia"
+      ],
       "minutes": 2,
       "appVersion": "2.4",
       "updated": "2026-11-02",
-      "before": ["Your account is verified", "The receipt shows Yara products", "The whole receipt is clear and flat"],
+      "before": [
+        "Your account is verified",
+        "The receipt shows Yara products",
+        "The whole receipt is clear and flat"
+      ],
       "steps": [
-        { "title": "Tap the camera button", "android": "On the home screen, tap the camera (Scan) button at the bottom.", "ios": "On the home screen, tap the camera (Scan) button at the bottom centre.", "screen": "Home screen", "y": "78%" },
-        { "title": "Take a photo of the receipt", "android": "Fit the whole receipt in the frame, or choose a photo from your gallery.", "ios": "Fit the whole receipt in the frame, or tap Photos to choose one you already took.", "screen": "Camera", "y": "45%" },
-        { "title": "Check and submit", "android": "Rotate the photo if needed, then tap Submit to send it for review.", "ios": "Rotate the photo if needed, then tap Submit to send it for review.", "screen": "Confirm photo", "y": "82%" },
-        { "title": "See it in Transaction history", "android": "Your receipt shows a clock icon while it is pending approval.", "ios": "Your receipt shows a clock icon while it is pending approval.", "screen": "Transaction history", "y": "30%" }
+        {
+          "title": "Tap the camera button",
+          "android": "On the home screen, tap the camera (Scan) button at the bottom.",
+          "ios": "On the home screen, tap the camera (Scan) button at the bottom centre.",
+          "screen": "Home screen",
+          "y": "78%"
+        },
+        {
+          "title": "Take a photo of the receipt",
+          "android": "Fit the whole receipt in the frame, or choose a photo from your gallery.",
+          "ios": "Fit the whole receipt in the frame, or tap Photos to choose one you already took.",
+          "screen": "Camera",
+          "y": "45%"
+        },
+        {
+          "title": "Check and submit",
+          "android": "Rotate the photo if needed, then tap Submit to send it for review.",
+          "ios": "Rotate the photo if needed, then tap Submit to send it for review.",
+          "screen": "Confirm photo",
+          "y": "82%"
+        },
+        {
+          "title": "See it in Transaction history",
+          "android": "Your receipt shows a clock icon while it is pending approval.",
+          "ios": "Your receipt shows a clock icon while it is pending approval.",
+          "screen": "Transaction history",
+          "y": "30%"
+        }
       ],
       "tip": "Photograph the receipt on a flat surface in good light. Blurry or cut-off receipts are the most common reason for rejection.",
       "next": [
-        { "label": "1 · PENDING", "text": "Yara staff check your receipt", "tone": "muted" },
-        { "label": "2 · APPROVED", "text": "Points are added to your account", "tone": "good" },
-        { "label": "OR · REJECTED", "text": "Tap the receipt to see why, then resubmit", "tone": "bad" }
+        {
+          "label": "1 · PENDING",
+          "text": "Yara staff check your receipt",
+          "tone": "muted"
+        },
+        {
+          "label": "2 · APPROVED",
+          "text": "Points are added to your account",
+          "tone": "good"
+        },
+        {
+          "label": "OR · REJECTED",
+          "text": "Tap the receipt to see why, then resubmit",
+          "tone": "bad"
+        }
       ],
-      "problems": ["My receipt was rejected", "Points were not credited"],
-      "changes": []
+      "problems": [
+        "My receipt was rejected",
+        "Points were not credited"
+      ],
+      "changes": [],
+      "featureNo": 9,
+      "status": "published",
+      "source": "TH sub-dealer guide V1.0 (app 1.7)"
     },
     {
       "id": "scan-qr",
@@ -43,24 +1102,67 @@
       "category": "earn-points",
       "title": "Scan QR codes",
       "summary": "Scan the QR code on a Yara bag to earn points straight away.",
-      "roles": ["dealer", "subdealer", "assistant"],
-      "countries": ["Thailand", "Vietnam", "Indonesia", "India", "Kenya"],
+      "roles": [
+        "dealer",
+        "subdealer",
+        "assistant"
+      ],
+      "countries": [
+        "Indonesia",
+        "Kenya",
+        "Vietnam"
+      ],
       "minutes": 1,
       "appVersion": "2.4",
       "updated": "2026-10-20",
-      "before": ["Your account is verified", "The QR sticker is not torn", "Camera access is allowed"],
+      "before": [
+        "Your account is verified",
+        "The QR sticker is not torn",
+        "Camera access is allowed"
+      ],
       "steps": [
-        { "title": "Tap Scan", "android": "On the home screen, tap the Scan button.", "ios": "On the home screen, tap the Scan button.", "screen": "Home screen", "y": "78%" },
-        { "title": "Point at the QR code", "android": "Hold the phone about 15 cm from the sticker until it beeps.", "ios": "Hold the phone about 15 cm from the sticker until it vibrates.", "screen": "Scanner", "y": "45%" },
-        { "title": "Check your points", "android": "A green tick shows the points you just earned.", "ios": "A green tick shows the points you just earned.", "screen": "Scan result", "y": "40%" }
+        {
+          "title": "Tap Scan",
+          "android": "On the home screen, tap the Scan button.",
+          "ios": "On the home screen, tap the Scan button.",
+          "screen": "Home screen",
+          "y": "78%"
+        },
+        {
+          "title": "Point at the QR code",
+          "android": "Hold the phone about 15 cm from the sticker until it beeps.",
+          "ios": "Hold the phone about 15 cm from the sticker until it vibrates.",
+          "screen": "Scanner",
+          "y": "45%"
+        },
+        {
+          "title": "Check your points",
+          "android": "A green tick shows the points you just earned.",
+          "ios": "A green tick shows the points you just earned.",
+          "screen": "Scan result",
+          "y": "40%"
+        }
       ],
-      "tip": "Each QR code can only be scanned once. If it says 'already used', contact your dealer.",
+      "tip": "You can scan up to 50 bags at once, or save up to 50 scans offline and send them later. Points arrive within 24 hours.",
       "next": [
-        { "label": "INSTANT", "text": "Points appear straight away", "tone": "good" },
-        { "label": "OR · ALREADY USED", "text": "The code was scanned before", "tone": "bad" }
+        {
+          "label": "INSTANT",
+          "text": "Points appear straight away",
+          "tone": "good"
+        },
+        {
+          "label": "OR · ALREADY USED",
+          "text": "The code was scanned before",
+          "tone": "bad"
+        }
       ],
-      "problems": ["QR code says already used", "Camera will not open"],
-      "changes": []
+      "problems": [
+        "QR code says already used",
+        "Camera will not open"
+      ],
+      "changes": [],
+      "featureNo": 10,
+      "status": "draft"
     },
     {
       "id": "transaction-history",
@@ -68,19 +1170,372 @@
       "category": "earn-points",
       "title": "Check your transaction history",
       "summary": "See every receipt and QR scan, and whether points were added.",
-      "roles": ["dealer", "subdealer"],
-      "countries": ["Thailand", "Vietnam", "Indonesia", "India", "Kenya"],
+      "roles": [
+        "dealer",
+        "subdealer"
+      ],
+      "countries": [
+        "Thailand",
+        "Vietnam",
+        "Indonesia",
+        "India",
+        "Kenya"
+      ],
       "minutes": 1,
       "appVersion": "2.3",
       "updated": "2026-09-14",
-      "before": ["You have submitted at least one receipt or scan"],
+      "before": [
+        "You have submitted at least one receipt or scan"
+      ],
       "steps": [
-        { "title": "Open Points", "android": "Tap Points in the bottom menu.", "ios": "Tap Points in the bottom menu.", "screen": "Home screen", "y": "90%" },
-        { "title": "Tap Transaction history", "android": "Each row shows the date, points and status icon.", "ios": "Each row shows the date, points and status icon.", "screen": "Points", "y": "35%" }
+        {
+          "title": "Open History",
+          "android": "On the home screen, tap History.",
+          "ios": "On the home screen, tap History.",
+          "screen": "Home screen",
+          "y": "80%"
+        },
+        {
+          "title": "Open a transaction",
+          "android": "Tap a transaction to see its details.",
+          "ios": "Tap a transaction to see its details.",
+          "screen": "History list",
+          "y": "35%"
+        },
+        {
+          "title": "Check the status",
+          "android": "Pending means it's waiting for approval. Approved receipts show a green mark; otherwise you'll see Receipt rejected.",
+          "ios": "Pending means it's waiting for approval. Approved receipts show a green mark; otherwise you'll see Receipt rejected.",
+          "screen": "Transaction detail",
+          "y": "30%"
+        }
       ],
       "tip": "Pull down on the list to refresh it.",
       "next": [],
-      "problems": ["Points were not credited"],
+      "problems": [
+        "Points were not credited"
+      ],
+      "changes": [],
+      "featureNo": 13,
+      "status": "published",
+      "source": "TH sub-dealer guide V1.0 (app 1.7)"
+    },
+    {
+      "id": "redeem-reward",
+      "featureId": "YC-REWARDS-REDEEM",
+      "featureNo": 12,
+      "category": "rewards",
+      "title": "Redeem a reward",
+      "summary": "Use your points for a discount coupon or reward.",
+      "roles": [
+        "dealer",
+        "subdealer"
+      ],
+      "countries": [
+        "Thailand",
+        "Vietnam",
+        "Indonesia",
+        "India",
+        "Kenya"
+      ],
+      "minutes": 2,
+      "appVersion": "1.7",
+      "updated": "2026-11-10",
+      "status": "published",
+      "source": "TH sub-dealer guide V1.0 (app 1.7)",
+      "before": [],
+      "steps": [
+        {
+          "title": "Open Rewards",
+          "android": "On the home screen, tap Rewards.",
+          "ios": "On the home screen, tap Rewards.",
+          "screen": "Home screen",
+          "y": "75%"
+        },
+        {
+          "title": "Choose a reward",
+          "android": "Pick a reward and choose the discount amount, then tap Next.",
+          "ios": "Pick a reward and choose the discount amount, then tap Next.",
+          "screen": "Coupon details",
+          "y": "80%"
+        },
+        {
+          "title": "Send the request",
+          "android": "Tap Send request, then Done.",
+          "ios": "Tap Send request, then Done.",
+          "screen": "Confirm",
+          "y": "70%"
+        },
+        {
+          "title": "Track the status",
+          "android": "In My Rewards the request shows Pending. You can cancel it here until it's approved.",
+          "ios": "In My Rewards the request shows Pending. You can cancel it here until it's approved.",
+          "screen": "My Rewards",
+          "y": "35%"
+        }
+      ],
+      "tip": "",
+      "next": [
+        {
+          "label": "PENDING",
+          "text": "Yara is reviewing your request",
+          "tone": "muted"
+        },
+        {
+          "label": "REDEEMED",
+          "text": "Your reward is ready",
+          "tone": "good"
+        },
+        {
+          "label": "OR · REJECTED",
+          "text": "Points go back to your balance",
+          "tone": "bad"
+        }
+      ],
+      "problems": [
+        "My points expired",
+        "My reward was rejected"
+      ],
+      "changes": []
+    },
+    {
+      "id": "tiers-rebates",
+      "featureId": "YC-REWARDS-TIERS",
+      "featureNo": 11,
+      "category": "rewards",
+      "title": "Tiers and quarterly rebates",
+      "summary": "See your tier level and the rebate you can earn each quarter.",
+      "roles": [
+        "dealer",
+        "subdealer"
+      ],
+      "countries": [
+        "Indonesia"
+      ],
+      "minutes": 2,
+      "appVersion": "2.x",
+      "updated": "2026-11-18",
+      "status": "draft",
+      "before": [],
+      "steps": [
+        {
+          "title": "Open Rewards",
+          "android": "Tap Rewards on the home screen.",
+          "ios": "Tap Rewards on the home screen.",
+          "screen": "Home screen",
+          "y": "75%"
+        },
+        {
+          "title": "See your tier",
+          "android": "Your tier and progress to the next level are shown at the top.",
+          "ios": "Your tier and progress to the next level are shown at the top.",
+          "screen": "Tier card",
+          "y": "25%"
+        }
+      ],
+      "tip": "",
+      "next": [],
+      "problems": [],
+      "changes": []
+    },
+    {
+      "id": "sales-dashboard",
+      "featureId": "YC-SALES-DASHBOARD",
+      "featureNo": 16,
+      "category": "help",
+      "title": "Read your sales dashboard",
+      "summary": "See yesterday's sales, revenue, bestsellers and what farmers want.",
+      "roles": [
+        "dealer",
+        "subdealer"
+      ],
+      "countries": [
+        "Thailand",
+        "Vietnam",
+        "Indonesia",
+        "India",
+        "Kenya"
+      ],
+      "minutes": 2,
+      "appVersion": "2.x",
+      "updated": "2026-11-18",
+      "status": "draft",
+      "before": [],
+      "steps": [
+        {
+          "title": "Open the dashboard",
+          "android": "Tap Sales on the home screen.",
+          "ios": "Tap Sales on the home screen.",
+          "screen": "Home screen",
+          "y": "55%"
+        },
+        {
+          "title": "Read the numbers",
+          "android": "Check yesterday's sales, the % change and your bestsellers.",
+          "ios": "Check yesterday's sales, the % change and your bestsellers.",
+          "screen": "Dashboard",
+          "y": "35%"
+        }
+      ],
+      "tip": "",
+      "next": [],
+      "problems": [],
+      "changes": []
+    },
+    {
+      "id": "newsfeed",
+      "featureId": "YC-NEWSFEED",
+      "featureNo": 18,
+      "category": "help",
+      "title": "Read news and tips",
+      "summary": "Product news, offers and farming tips from Yara.",
+      "roles": [
+        "dealer",
+        "subdealer",
+        "assistant"
+      ],
+      "countries": [
+        "Thailand",
+        "Vietnam",
+        "Indonesia",
+        "India",
+        "Kenya"
+      ],
+      "minutes": 1,
+      "appVersion": "1.7",
+      "updated": "2026-11-10",
+      "status": "published",
+      "source": "TH sub-dealer guide V1.0 (app 1.7)",
+      "before": [],
+      "steps": [
+        {
+          "title": "Open Newsfeed",
+          "android": "Tap Newsfeed.",
+          "ios": "Tap Newsfeed.",
+          "screen": "Home screen",
+          "y": "85%"
+        },
+        {
+          "title": "Read an article",
+          "android": "Tap an article to open it, and tap Like if it helped.",
+          "ios": "Tap an article to open it, and tap Like if it helped.",
+          "screen": "Article",
+          "y": "40%"
+        }
+      ],
+      "tip": "",
+      "next": [],
+      "problems": [],
+      "changes": []
+    },
+    {
+      "id": "contact-support",
+      "featureId": "YC-SUPPORT",
+      "featureNo": 20,
+      "category": "help",
+      "title": "Get help and contact support",
+      "summary": "Read the FAQ or send a question to Yara support.",
+      "roles": [
+        "dealer",
+        "subdealer",
+        "assistant"
+      ],
+      "countries": [
+        "Thailand",
+        "Vietnam",
+        "Indonesia",
+        "India",
+        "Kenya"
+      ],
+      "minutes": 2,
+      "appVersion": "1.7",
+      "updated": "2026-11-10",
+      "status": "published",
+      "source": "TH sub-dealer guide V1.0 (app 1.7)",
+      "before": [],
+      "steps": [
+        {
+          "title": "Open Support",
+          "android": "On the home screen, tap Support.",
+          "ios": "On the home screen, tap Support.",
+          "screen": "Home screen",
+          "y": "90%"
+        },
+        {
+          "title": "Check the FAQ",
+          "android": "Pick a topic and read the answer.",
+          "ios": "Pick a topic and read the answer.",
+          "screen": "FAQ",
+          "y": "40%"
+        },
+        {
+          "title": "Contact us",
+          "android": "Tap Contact us, pick a topic and write a short description.",
+          "ios": "Tap Contact us, pick a topic and write a short description.",
+          "screen": "Contact form",
+          "y": "70%"
+        },
+        {
+          "title": "Done",
+          "android": "Tap Got it. Support replies within 48 hours.",
+          "ios": "Tap Got it. Support replies within 48 hours.",
+          "screen": "Confirmation",
+          "y": "80%"
+        }
+      ],
+      "tip": "",
+      "next": [],
+      "problems": [],
+      "changes": []
+    },
+    {
+      "id": "ap-approve-receipts",
+      "featureId": "AP-RECEIPTS",
+      "featureNo": null,
+      "category": "admin",
+      "title": "Approve receipts (Admin Portal)",
+      "summary": "Review receipts submitted by sub-dealers and approve or reject them.",
+      "roles": [
+        "staff"
+      ],
+      "countries": [
+        "Thailand",
+        "Vietnam",
+        "Indonesia",
+        "India",
+        "Kenya"
+      ],
+      "minutes": 2,
+      "appVersion": "2.x",
+      "updated": "2026-11-18",
+      "status": "draft",
+      "before": [],
+      "steps": [
+        {
+          "title": "Open Receipts",
+          "android": "In the Admin Portal, open Receipts → Pending.",
+          "ios": "In the Admin Portal, open Receipts → Pending.",
+          "screen": "AP receipts list",
+          "y": "25%"
+        },
+        {
+          "title": "Check the receipt",
+          "android": "Open a receipt and compare it with the products and amounts.",
+          "ios": "Open a receipt and compare it with the products and amounts.",
+          "screen": "Receipt detail",
+          "y": "45%"
+        },
+        {
+          "title": "Approve or reject",
+          "android": "Approve, or reject with a reason the shop will see.",
+          "ios": "Approve, or reject with a reason the shop will see.",
+          "screen": "Receipt detail",
+          "y": "85%"
+        }
+      ],
+      "tip": "",
+      "next": [],
+      "problems": [],
       "changes": []
     }
   ]

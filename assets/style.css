@@ -110,7 +110,24 @@ main.guide { flex: 999 1 560px; min-width: 0; display: flex; flex-direction: col
 .pager small { color: var(--muted); display: block; }
 .stack { display: flex; flex-direction: column; gap: 12px; }
 
+/* Placeholder + features */
+.draft-note { border: 1px dashed #B9A15A; background: #FFFDF5; border-radius: 16px; padding: 14px 20px; display: flex; gap: 12px; align-items: flex-start; }
+.draft-note b { font-size: 11px; padding: 4px 10px; border-radius: 999px; background: #6B4E00; color: #fff; }
+.draft-note p { margin: 0; font-size: 14px; color: #5A4A1A; }
+.meta .draft-tag { background: #FFF4D6; border-color: #E9C46A; color: #6B4E00; font-weight: 600; }
+.meta a.feat-chip { padding: 4px 10px; border-radius: 999px; border: 1px solid var(--green); color: var(--green); text-decoration: none; font-weight: 600; }
+.feature { display: grid; grid-template-columns: 48px 1fr minmax(220px, 300px); gap: 20px; align-items: start; padding: 22px; border: 1px solid var(--line); border-radius: 16px; scroll-margin-top: 80px; }
+.feature.flash { border-color: var(--green); box-shadow: 0 0 0 3px var(--green-soft); }
+.fno { width: 40px; height: 40px; border-radius: 10px; background: var(--green-soft); color: var(--green); font-weight: 800; display: grid; place-items: center; }
+.fbody h3 { margin: 0 0 6px; font-size: 18px; } .fbody p { margin: 0 0 10px; color: var(--ink-2); font-size: 14px; }
+.flinks { display: flex; flex-direction: column; gap: 8px; align-items: flex-start; }
+.flinks .pill { font-size: 13px; }
+.filters { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; justify-content: space-between; }
+.filters input { flex: 0 1 320px; padding: 10px 14px; border: 1px solid var(--line-2); border-radius: 10px; }
+.top-nav a[aria-current="page"] { color: var(--green); font-weight: 700; }
+
 @media (max-width: 860px) {
+  .feature { grid-template-columns: 40px 1fr; } .flinks { grid-column: 2; }
   h1 { font-size: 36px; } .guide h1 { font-size: 32px; }
   .grid4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .grid2, .grid3, .checks { grid-template-columns: 1fr; }

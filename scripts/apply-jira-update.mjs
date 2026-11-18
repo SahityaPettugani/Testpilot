@@ -39,12 +39,14 @@ const today = () => new Date().toISOString().slice(0, 10);
 
 function findGuide(guides, p) {
   const norm = (s) => String(s || '').toLowerCase().replace(/[^a-z0-9]+/g, '');
-  const f = norm(p.feature);
-  return (
-    guides.find((g) => p.guideId && g.id === p.guideId) ||
-    guides.find((g) => f && norm(g.featureId) === f) ||
-    guides.find((g) => f && (norm(g.title) === f || norm(g.id) === f))
-  );
+  // Jira sends several components as "A, B": try each one.
+  const parts = String(p.feature || '').split(',').map(norm).filter(Boolean);
+  if (p.guideId) { const hit = guides.find((g) => g.id === p.guideId); if (hit) return hit; }
+  for (const f of parts) {
+    const hit = guides.find((g) => norm(g.featureId) === f) || guides.find((g) => norm(g.title) === f || norm(g.id) === f);
+    if (hit) return hit;
+  }
+  return null;
 }
 
 async function askClaude(guide, p) {

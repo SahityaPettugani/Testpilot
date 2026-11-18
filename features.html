@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>App features · YaraConnect Help</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body data-page="features">
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html"><span class="logo">Y</span>YaraConnect Help</a>
+      <nav class="top-nav" aria-label="Main"><a href="index.html#topics">Guides</a><a href="features.html" aria-current="page">App features</a></nav>
+    </div>
+  </header>
+  <section class="hero">
+    <div class="wrap" style="padding-top:48px;padding-bottom:40px">
+      <span class="eyebrow">YaraConnect · App features</span>
+      <h1 style="font-size:44px;max-width:22ch">Everything the app can do</h1>
+      <p class="lead">Each feature links to its step-by-step guide. Features marked Placeholder have a sample page that still needs real steps and screenshots.</p>
+    </div>
+  </section>
+  <section class="block">
+    <div class="wrap" style="padding-bottom:72px">
+      <div class="filters">
+        <div class="seg" id="froles" role="group" aria-label="Filter by role">
+          <button type="button" data-r="all" aria-pressed="true">All</button>
+          <button type="button" data-r="dealer" aria-pressed="false">Dealer</button>
+          <button type="button" data-r="subdealer" aria-pressed="false">Sub-dealer</button>
+          <button type="button" data-r="assistant" aria-pressed="false">Assistant</button>
+        </div>
+        <label class="sr-only" for="fq">Search features</label>
+        <input id="fq" type="search" placeholder="Search features, e.g. stock, QR, Kenya">
+      </div>
+      <span class="sub" id="fcount" style="font-size:13px"></span>
+      <div class="stack" id="flist" style="gap:12px"></div>
+    </div>
+  </section>
+  <script src="assets/app.js"></script>
+</body>
+</html>

@@ -14,11 +14,12 @@
 
   async function load() {
     const bust = '?v=' + Date.now();
-    const [g, n] = await Promise.all([
+    const [g, n, f] = await Promise.all([
       fetch('content/guides.json' + bust).then((r) => r.json()),
-      fetch('content/whats-new.json' + bust).then((r) => r.json())
+      fetch('content/whats-new.json' + bust).then((r) => r.json()),
+      fetch('content/features.json' + bust).then((r) => r.json())
     ]);
-    return { ...g, news: n.items };
+    return { ...g, news: n.items, features: f.features };
   }
 
   function ticketTag(c) {
@@ -108,6 +109,7 @@
             ${g.roles.map((r) => `<span class="role-tag">${ROLE_NAMES[r]}</span>`).join('')}
             <span>${esc(country)}</span>
             <span>${g.minutes} min</span>
+            ${g.featureNo ? `<a class="feat-chip" href="features.html#f${g.featureNo}">Feature ${g.featureNo}</a>` : ''}
             <span class="${isFresh(g.updated) ? 'fresh' : ''}">Updated ${fmtDate(g.updated)} · App ${esc(g.appVersion)}</span>
           </div>
           <div class="title-row">
@@ -120,15 +122,17 @@
           <p class="lead">${esc(g.summary)}</p>
         </div>
 
+        ${g.status === 'draft' ? `<section class="draft-note"><b>PLACEHOLDER</b><p>Sample layout. Steps are drafted from the feature map and still need to be checked against the real app and screenshots.</p></section>` : (g.source ? `<p class="sub" style="font-size:12px;margin:-16px 0 0">Source: ${esc(g.source)}</p>` : '')}
+
         ${recent.length ? `<section class="changed" aria-label="Recent changes">
           <h2>What changed recently</h2>
           <ul>${recent.map((c) => `<li>${ticketTag(c)} ${esc(c.text)} <small class="sub" style="font-size:12px">(${fmtDate(c.date)}${c.version ? ' · App ' + esc(c.version) : ''})</small></li>`).join('')}</ul>
         </section>` : ''}
 
-        <section class="box" id="before">
+        ${g.before.length ? `<section class="box" id="before">
           <h2>Before you start</h2>
           <div class="checks">${g.before.map((b, i) => `<label><input type="checkbox" id="chk${i}"> ${esc(b)}</label>`).join('')}</div>
-        </section>
+        </section>` : '<span id="before"></span>'}
 
         <section class="stack" id="steps" style="gap:20px">
           <h2>Steps</h2>
@@ -151,7 +155,7 @@
 
         <section class="stack" id="wrong">
           <h2>If it goes wrong</h2>
-          ${g.problems.map((p) => `<a class="row-link" href="#"><span>${esc(p)}</span><span>Read fix</span></a>`).join('')}
+          ${(g.problems.length ? g.problems : ['Something else went wrong']).map((p) => `<a class="row-link" href="guide.html?id=contact-support"><span>${esc(p)}</span><span>Read fix</span></a>`).join('')}
         </section>
 
         <section class="feedback" id="fb">
@@ -175,7 +179,48 @@
     render();
   }
 
-  load().then((data) => (document.body.dataset.page === 'guide' ? guide : home)(data))
+  // ---------- App features ----------
+  function features(data) {
+    const byId = Object.fromEntries(data.guides.map((x) => [x.id, x]));
+    let filter = 'all';
+    const q = $('fq');
+    function render() {
+      const term = q.value.trim().toLowerCase();
+      const list = data.features.filter((f) => {
+        const gs = f.guides.map((id) => byId[id]);
+        const roleOk = filter === 'all' || gs.some((x) => x.roles.includes(filter));
+        const textOk = !term || [f.name, f.what, f.who, f.markets].join(' ').toLowerCase().includes(term);
+        return roleOk && textOk;
+      });
+      $('fcount').textContent = `${list.length} of ${data.features.length} features`;
+      $('flist').innerHTML = list.map((f) => {
+        const gs = f.guides.map((id) => byId[id]);
+        const ready = gs.filter((x) => x.status !== 'draft').length;
+        return `<article class="feature" id="f${f.no}">
+          <div class="fno">${f.no}</div>
+          <div class="fbody">
+            <h3>${esc(f.name)}</h3>
+            <p>${esc(f.what)}</p>
+            <div class="meta"><span>Who: ${esc(f.who)}</span><span>Markets: ${esc(f.markets)}</span>
+              <span class="${ready === gs.length ? 'role-tag' : 'draft-tag'}">${ready === gs.length ? 'Guide ready' : ready ? 'Partly drafted' : 'Placeholder'}</span></div>
+          </div>
+          <div class="flinks">${gs.map((x) => `<a class="pill" href="guide.html?id=${x.id}">${esc(x.title)} →</a>`).join('')}</div>
+        </article>`;
+      }).join('') || '<p class="sub">No features match.</p>';
+    }
+    $('froles').addEventListener('click', (e) => {
+      const b = e.target.closest('button'); if (!b) return;
+      filter = b.dataset.r;
+      $('froles').querySelectorAll('button').forEach((x) => x.setAttribute('aria-pressed', x === b));
+      render();
+    });
+    q.addEventListener('input', render);
+    render();
+    if (location.hash) setTimeout(() => { const el = document.querySelector(location.hash); if (el) { el.scrollIntoView({ block: 'center' }); el.classList.add('flash'); } }, 50);
+  }
+
+  const pages = { home, guide, features };
+  load().then((data) => pages[document.body.dataset.page](data))
     .catch((err) => {
       document.body.insertAdjacentHTML('beforeend', `<p class="wrap" style="color:var(--red)">Could not load guide content (${esc(err.message)}). Open the site through a web server, e.g. <code>npx serve .</code></p>`);
     });

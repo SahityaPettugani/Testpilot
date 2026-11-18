@@ -1,0 +1,209 @@
+{
+  "app": "YaraConnect",
+  "features": [
+    {
+      "no": 1,
+      "name": "Onboarding",
+      "what": "Pick country and language, accept terms, verify by SMS, add personal and shop details, enter dealer code",
+      "who": "All shops",
+      "markets": "All",
+      "guides": [
+        "install-app",
+        "register",
+        "verify-account"
+      ]
+    },
+    {
+      "no": 2,
+      "name": "Account and shop location",
+      "what": "View account details, set GPS shop location, choose content location",
+      "who": "All",
+      "markets": "All",
+      "guides": [
+        "shop-location"
+      ]
+    },
+    {
+      "no": 3,
+      "name": "Multishop and staff",
+      "what": "Add branch shops and invite shop assistants by phone",
+      "who": "Shop owner",
+      "markets": "All (TH branches earn 0 points)",
+      "guides": [
+        "multishop-staff"
+      ]
+    },
+    {
+      "no": 4,
+      "name": "Stock",
+      "what": "Product, size, price and quantity; dealer stock syncs from Yara's ERP; pending vs available",
+      "who": "Shops",
+      "markets": "Where online shop is live",
+      "guides": [
+        "update-stock"
+      ]
+    },
+    {
+      "no": 5,
+      "name": "Shop profile / online shop",
+      "what": "Photo, contact, hours and description shown to farmers in FarmCare",
+      "who": "Shops",
+      "markets": "Where FarmCare shop is live",
+      "guides": [
+        "online-shop"
+      ]
+    },
+    {
+      "no": 6,
+      "name": "Farmer order management",
+      "what": "Review, accept or decline, verify pickup and complete farmer orders",
+      "who": "Retailers",
+      "markets": "Where FarmCare shop is live",
+      "guides": [
+        "farmer-orders"
+      ]
+    },
+    {
+      "no": 7,
+      "name": "USSD orders",
+      "what": "Orders from basic-phone farmers, shown as USSD user",
+      "who": "Retailers",
+      "markets": "Africa",
+      "guides": [
+        "ussd-orders"
+      ]
+    },
+    {
+      "no": 8,
+      "name": "Farmer assisted orders",
+      "what": "Create an order on behalf of a farmer using their phone and code",
+      "who": "Retailers",
+      "markets": "India",
+      "guides": [
+        "assisted-order"
+      ]
+    },
+    {
+      "no": 9,
+      "name": "Earn points: receipts",
+      "what": "Photo of purchase receipt, reviewed by Yara, then approved or rejected",
+      "who": "Sub-dealers",
+      "markets": "TH, VN, PH",
+      "guides": [
+        "earn-points-receipt"
+      ]
+    },
+    {
+      "no": 10,
+      "name": "Earn points: QR scan",
+      "what": "Scan bag QR codes; bulk scan and offline scan up to 50",
+      "who": "Shops",
+      "markets": "ID, KE, VN",
+      "guides": [
+        "scan-qr"
+      ]
+    },
+    {
+      "no": 11,
+      "name": "Tiers and rebates",
+      "what": "Tier levels and quarterly rebates in Rewards",
+      "who": "Shops",
+      "markets": "ID",
+      "guides": [
+        "tiers-rebates"
+      ]
+    },
+    {
+      "no": 12,
+      "name": "Rewards and redemption",
+      "what": "Browse and redeem rewards, history, points expiry",
+      "who": "Shop owner",
+      "markets": "All",
+      "guides": [
+        "redeem-reward"
+      ]
+    },
+    {
+      "no": 13,
+      "name": "Transaction history",
+      "what": "Points history and receipt statuses",
+      "who": "All",
+      "markets": "All",
+      "guides": [
+        "transaction-history"
+      ]
+    },
+    {
+      "no": 14,
+      "name": "ROS: retailer ordering",
+      "what": "Retailer orders from distributor; distributor approves, edits or declines",
+      "who": "Distributors, retailers",
+      "markets": "KE, TH, IN",
+      "guides": [
+        "ros-place-order",
+        "ros-approve"
+      ]
+    },
+    {
+      "no": 15,
+      "name": "DOS: ordering from Yara",
+      "what": "Floor load or sling, MT or bags, truck, pick-up date, payment terms; tracking and chat",
+      "who": "Dealers",
+      "markets": "TH (+ SUN countries)",
+      "guides": [
+        "dos-place-order",
+        "dos-track-order"
+      ]
+    },
+    {
+      "no": 16,
+      "name": "Sales dashboard",
+      "what": "Yesterday's sales, revenue, bestsellers, what farmers want",
+      "who": "Shops",
+      "markets": "To confirm",
+      "guides": [
+        "sales-dashboard"
+      ]
+    },
+    {
+      "no": 17,
+      "name": "Farmer referral",
+      "what": "QR or link that brings farmers to your FarmCare shop",
+      "who": "Retailers",
+      "markets": "To confirm",
+      "guides": [
+        "farmer-referral"
+      ]
+    },
+    {
+      "no": 18,
+      "name": "Newsfeed and videos",
+      "what": "Product news, offers and farming tips",
+      "who": "All",
+      "markets": "All",
+      "guides": [
+        "newsfeed"
+      ]
+    },
+    {
+      "no": 19,
+      "name": "Payments",
+      "what": "M-Pesa paybill or till on your online shop",
+      "who": "Retailers",
+      "markets": "KE",
+      "guides": [
+        "mpesa-payments"
+      ]
+    },
+    {
+      "no": 20,
+      "name": "Support",
+      "what": "FAQ, create and view tickets; replies within 48 hours",
+      "who": "All",
+      "markets": "All",
+      "guides": [
+        "contact-support"
+      ]
+    }
+  ]
+}
