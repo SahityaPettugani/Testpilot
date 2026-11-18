@@ -1,5 +1,7 @@
 # YaraConnect Help: Jira auto-update sample
 
+**Live site:** https://sahityapettugani.github.io/Testpilot/
+
 A working sample of the YaraConnect user guide site, built from the wireframes
 (Home and Feature guide page). Guide content is stored as JSON. When a Jira ticket
 ships, GitHub drafts the guide change as a pull request. Merging the pull request
