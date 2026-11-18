@@ -1,0 +1,87 @@
+{
+  "categories": [
+    { "id": "get-started", "title": "Get started", "desc": "Download, register, verify your account", "roles": ["dealer", "subdealer", "assistant"] },
+    { "id": "my-shop", "title": "My shop", "desc": "Shop details, stock, branches and staff", "roles": ["dealer", "subdealer"] },
+    { "id": "dos", "title": "Order from Yara (DOS)", "desc": "Floor load, sling, tonnes or bags, tracking", "roles": ["dealer"] },
+    { "id": "ros", "title": "Sell to retailers (ROS)", "desc": "Review, approve and complete shop orders", "roles": ["dealer"] },
+    { "id": "farmers", "title": "Sell to farmers", "desc": "Farmer orders, assisted orders, referrals", "roles": ["dealer", "subdealer", "assistant"] },
+    { "id": "earn-points", "title": "Earn points", "desc": "Receipts, QR scan, transaction history", "roles": ["dealer", "subdealer", "assistant"] },
+    { "id": "rewards", "title": "Rewards", "desc": "Redeem, track requests, points expiry", "roles": ["dealer", "subdealer"] },
+    { "id": "admin", "title": "Approvals and campaigns", "desc": "Admin Portal: approvals, orders, stock", "roles": ["staff"] }
+  ],
+  "guides": [
+    {
+      "id": "earn-points-receipt",
+      "featureId": "YC-EARN-RECEIPT",
+      "category": "earn-points",
+      "title": "Earn points with a receipt",
+      "summary": "Take a photo of your Yara purchase receipt. Yara checks it and adds points to your account.",
+      "roles": ["dealer", "subdealer"],
+      "countries": ["Thailand", "Vietnam", "Indonesia"],
+      "minutes": 2,
+      "appVersion": "2.4",
+      "updated": "2026-11-02",
+      "before": ["Your account is verified", "The receipt shows Yara products", "The whole receipt is clear and flat"],
+      "steps": [
+        { "title": "Tap the camera button", "android": "On the home screen, tap the camera (Scan) button at the bottom.", "ios": "On the home screen, tap the camera (Scan) button at the bottom centre.", "screen": "Home screen", "y": "78%" },
+        { "title": "Take a photo of the receipt", "android": "Fit the whole receipt in the frame, or choose a photo from your gallery.", "ios": "Fit the whole receipt in the frame, or tap Photos to choose one you already took.", "screen": "Camera", "y": "45%" },
+        { "title": "Check and submit", "android": "Rotate the photo if needed, then tap Submit to send it for review.", "ios": "Rotate the photo if needed, then tap Submit to send it for review.", "screen": "Confirm photo", "y": "82%" },
+        { "title": "See it in Transaction history", "android": "Your receipt shows a clock icon while it is pending approval.", "ios": "Your receipt shows a clock icon while it is pending approval.", "screen": "Transaction history", "y": "30%" }
+      ],
+      "tip": "Photograph the receipt on a flat surface in good light. Blurry or cut-off receipts are the most common reason for rejection.",
+      "next": [
+        { "label": "1 · PENDING", "text": "Yara staff check your receipt", "tone": "muted" },
+        { "label": "2 · APPROVED", "text": "Points are added to your account", "tone": "good" },
+        { "label": "OR · REJECTED", "text": "Tap the receipt to see why, then resubmit", "tone": "bad" }
+      ],
+      "problems": ["My receipt was rejected", "Points were not credited"],
+      "changes": []
+    },
+    {
+      "id": "scan-qr",
+      "featureId": "YC-EARN-QR",
+      "category": "earn-points",
+      "title": "Scan QR codes",
+      "summary": "Scan the QR code on a Yara bag to earn points straight away.",
+      "roles": ["dealer", "subdealer", "assistant"],
+      "countries": ["Thailand", "Vietnam", "Indonesia", "India", "Kenya"],
+      "minutes": 1,
+      "appVersion": "2.4",
+      "updated": "2026-10-20",
+      "before": ["Your account is verified", "The QR sticker is not torn", "Camera access is allowed"],
+      "steps": [
+        { "title": "Tap Scan", "android": "On the home screen, tap the Scan button.", "ios": "On the home screen, tap the Scan button.", "screen": "Home screen", "y": "78%" },
+        { "title": "Point at the QR code", "android": "Hold the phone about 15 cm from the sticker until it beeps.", "ios": "Hold the phone about 15 cm from the sticker until it vibrates.", "screen": "Scanner", "y": "45%" },
+        { "title": "Check your points", "android": "A green tick shows the points you just earned.", "ios": "A green tick shows the points you just earned.", "screen": "Scan result", "y": "40%" }
+      ],
+      "tip": "Each QR code can only be scanned once. If it says 'already used', contact your dealer.",
+      "next": [
+        { "label": "INSTANT", "text": "Points appear straight away", "tone": "good" },
+        { "label": "OR · ALREADY USED", "text": "The code was scanned before", "tone": "bad" }
+      ],
+      "problems": ["QR code says already used", "Camera will not open"],
+      "changes": []
+    },
+    {
+      "id": "transaction-history",
+      "featureId": "YC-EARN-HISTORY",
+      "category": "earn-points",
+      "title": "Check your transaction history",
+      "summary": "See every receipt and QR scan, and whether points were added.",
+      "roles": ["dealer", "subdealer"],
+      "countries": ["Thailand", "Vietnam", "Indonesia", "India", "Kenya"],
+      "minutes": 1,
+      "appVersion": "2.3",
+      "updated": "2026-09-14",
+      "before": ["You have submitted at least one receipt or scan"],
+      "steps": [
+        { "title": "Open Points", "android": "Tap Points in the bottom menu.", "ios": "Tap Points in the bottom menu.", "screen": "Home screen", "y": "90%" },
+        { "title": "Tap Transaction history", "android": "Each row shows the date, points and status icon.", "ios": "Each row shows the date, points and status icon.", "screen": "Points", "y": "35%" }
+      ],
+      "tip": "Pull down on the list to refresh it.",
+      "next": [],
+      "problems": ["Points were not credited"],
+      "changes": []
+    }
+  ]
+}

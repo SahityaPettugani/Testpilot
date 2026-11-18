@@ -1,0 +1,49 @@
+name: Jira → guide update
+
+# Runs when Jira Automation sends a "jira-doc-update" event,
+# or manually from the Actions tab (handy for testing without Jira).
+on:
+  repository_dispatch:
+    types: [jira-doc-update]
+  workflow_dispatch:
+    inputs:
+      key:       { description: 'Jira key (e.g. YC-482)', required: true, default: 'YC-482' }
+      summary:   { description: 'Ticket summary', required: true, default: 'Receipt upload: allow PDF receipts' }
+      change:    { description: 'User-facing change', required: false, default: 'You can now upload a PDF receipt, not just a photo.' }
+      feature:   { description: 'Feature ID (e.g. YC-EARN-RECEIPT)', required: true, default: 'YC-EARN-RECEIPT' }
+      version:   { description: 'Fix version', required: false, default: '2.5' }
+      stepIndex: { description: 'Step number affected (optional)', required: false, default: '2' }
+      stepText:  { description: 'New step text (optional)', required: false, default: 'Fit the whole receipt in the frame, or choose a photo or PDF from your files.' }
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  draft-update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Apply ticket to guide content
+        id: apply
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: node scripts/apply-jira-update.mjs
+
+      - name: Open pull request for review
+        uses: peter-evans/create-pull-request@v7
+        with:
+          branch: docs/jira-${{ github.event.client_payload.key || github.event.inputs.key }}
+          commit-message: "Docs: ${{ github.event.client_payload.key || github.event.inputs.key }} – update ${{ steps.apply.outputs.guide_title }}"
+          title: "Docs: ${{ github.event.client_payload.key || github.event.inputs.key }} – ${{ steps.apply.outputs.guide_title }}"
+          body: |
+            Drafted automatically from Jira. Review the wording, then merge to publish.
+
+            ${{ steps.apply.outputs.summary }}
+          labels: docs, from-jira
+          delete-branch: true

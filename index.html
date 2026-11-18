@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>YaraConnect Help</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body data-page="home">
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html"><span class="logo">Y</span>YaraConnect Help</a>
+      <nav class="top-nav" aria-label="Main">
+        <a href="#topics">Guides</a>
+        <a href="#whats-new">What's new</a>
+      </nav>
+      <label class="control">Country
+        <select id="country">
+          <option>Thailand</option><option>Vietnam</option><option>Indonesia</option><option>India</option><option>Kenya</option>
+        </select>
+      </label>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="wrap">
+      <span class="eyebrow" id="hero-eyebrow">YaraConnect user guide</span>
+      <h1>How can we help your shop today?</h1>
+      <label for="q" style="font-size:14px;color:var(--muted)">Search any task, button or error message</label>
+      <div class="search-row">
+        <input id="q" type="search" placeholder="e.g. receipt rejected, scan QR, history" autocomplete="off">
+        <div class="results" id="results" hidden></div>
+      </div>
+      <div class="pills" id="popular"><span style="color:var(--muted)">Popular:</span></div>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="wrap">
+      <h2>1. Who are you?</h2>
+      <p class="sub">We only show the guides that match your role.</p>
+      <div class="grid4" id="roles" role="group" aria-label="Your role">
+        <button type="button" class="role" data-role="dealer"><strong>Dealer / distributor</strong><span>Order from Yara, sell to shops, manage branches</span></button>
+        <button type="button" class="role" data-role="subdealer"><strong>Sub-dealer / retailer</strong><span>Earn points, sell to farmers, order from your dealer</span></button>
+        <button type="button" class="role" data-role="assistant"><strong>Shop assistant</strong><span>Scan, take orders and update stock for your shop</span></button>
+        <button type="button" class="role" data-role="staff"><strong>Yara staff</strong><span>Admin Portal: approvals, orders, stock, campaigns</span></button>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="topics">
+    <div class="wrap">
+      <div style="display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:8px">
+        <h2>2. Pick a topic</h2>
+        <span class="sub" id="showing" style="font-size:13px"></span>
+      </div>
+      <div class="grid4" id="cats"></div>
+    </div>
+  </section>
+
+  <section class="block" id="whats-new">
+    <div class="wrap grid2">
+      <div class="panel">
+        <h3>What's new in the app</h3>
+        <div class="stack" id="news"></div>
+        <small class="sub" style="font-size:12px">Updates tagged with a ticket number were added automatically from Jira.</small>
+      </div>
+      <div class="panel soft">
+        <h3>Still stuck?</h3>
+        <p class="sub" style="font-size:14px">Look up what a status means, or contact Yara support. Replies within 48 hours.</p>
+        <div style="display:flex;gap:8px;flex-wrap:wrap">
+          <a class="btn" href="#">Troubleshooting</a>
+          <a class="btn ghost" href="#">Contact support</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>

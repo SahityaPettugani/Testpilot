@@ -1,0 +1,9 @@
+{
+  "key": "YC-482",
+  "summary": "Receipt upload: allow PDF receipts",
+  "change": "You can now upload a PDF receipt, not just a photo.",
+  "feature": "YC-EARN-RECEIPT",
+  "version": "2.5",
+  "stepIndex": "2",
+  "stepText": "Fit the whole receipt in the frame, or choose a photo or PDF from your files."
+}
